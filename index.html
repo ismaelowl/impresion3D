@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Basic Meta Tag -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Calculadora Impresión 3d, aprende a calcular el precio de venta en pesos de tus impresiones de una manera facil." />
+  <meta name="keywords"
+    content="impresión 3d, print 3d, Calculadora, costos 3d, impresion 3d costos, ender 3 pro, ender 5 pro, creality, argentina" />
+  <meta name="author" content="IsmaelOwl" />
+  <title>Impresion 3D - Calculadora - Costos - Argentina</title>
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,900;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <section id="home">
+    <div class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark nav-desing" id="navBar">
+        <div class="container">
+          <a class="navbar-brand logo" href="#"><img src="./img/logo.png" alt="logo 3D App" width="110px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item mr-5">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item mr-5">
+                <a class="nav-link" href="#section-form">Calculadora</a>
+              </li>
+              <li class="nav-item  mr-5">
+                <a class="nav-link" href="#section-result">Resultado</a>
+              </li>
+              <li class="nav-item mr-5">
+                <a class="nav-link" href="#section-all">Tus Costos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./blog.html">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="progress-bar" id="progresoScroll"></div>
+    </div>
+
+    <div class="container home">
+      <div class="left align-middle">
+        <h1 id="titleHome" class="white">Aprende a calcular costos de impresión</h1>
+        <p id="pHome">Calculá, guardá y exportá los costos de tus impresiones 3D de una manera fácil.</p>
+        <a id="btnHome"><button type="button" class="btn btn-light btn-home">Calcular</button></a>
+        <div class="logos">
+          <div class="div1" id="imgHome1">
+            <img src="./img/logos/cura.png" alt="" width="150px">
+          </div>
+          <div class="div2" id="imgHome2">
+            <img src="./img/logos/thingiverse.png" alt="" width="200px">
+          </div>
+        </div>
+      </div>
+      <div class="text-center" id="canvas">
+        <iframe src='https://my.spline.design/librarylightingstudio2-c5b84ba0bb785f17bf227ecd987cbedc/' frameborder='0'
+          width='100%' height='100%'></iframe>
+      </div>
+    </div>
+
+  </section>
+  <section id="section-form">
+    <h1 class="title text-center">Calculemos el costo</h1>
+    <p class="text-center sub-title">Calculá tu valor hora y completá los datos para calcular.</p>
+    <div class="container form-app">
+      <div class="container form">
+        <h2 class="form-title">Completá los datos</h2>
+        <div class="form-floating mb-4">
+          <input type="text" class="form-control" id="nombre" placeholder="Robet Plant" autocomplete="off">
+          <label for="nombre">Nombre del Archivo</label>
+          <div class="invalid-alert d-none" id="alert-nombre">
+            Ingrese un nombre.
+          </div>
+        </div>
+        <div class="form-floating mb-4">
+          <input type="number" class="form-control" id="costoFilamento" placeholder="Robet Plant" autocomplete="off">
+          <label for="costoFilamento">Precio de Filamento (1kg)</label>
+          <div class="invalid-alert d-none" id="alert-costoFilamento">
+            Ingrese el precio del filamento.
+          </div>
+        </div>
+        <div class="form-floating mb-4">
+          <input type="number" class="form-control" id="valorHora" placeholder="Robet Plant" autocomplete="off">
+          <label for="floatingInput">Valor Hora</label>
+          <div class="invalid-alert d-none" id="alert-valorHora">
+            Ingrese el valor hora.
+          </div>
+        </div>
+        <div class="form-floating mb-4">
+          <input type="number" class="form-control" id="tiempoImpresion" placeholder="Robet Plant" autocomplete="off">
+          <label for="floatingInput">Tiempo de Impresión (Horas)</label>
+          <div class="invalid-alert d-none" id="alert-tiempoImpresion">
+            Ingrese el tiempo de impresión.
+          </div>
+        </div>
+        <div class="form-floating mb-4">
+          <input type="number" class="form-control" id="cantidadMaterial" placeholder="Robet Plant" autocomplete="off">
+          <label for="floatingInput">Cantidad de Material Utilizado (Gramos)</label>
+          <div class="invalid-alert d-none" id="alert-cantidadMaterial">
+            Ingrese la cantidad de material.
+          </div>
+        </div>
+        <button id="btnCalcular" class="btn btn-light btn-home">Calcular</button>
+      </div>
+
+      <div class="container info">
+        <p class="mb-2">El <span class="custom-text">costo por hora de impresión (Valor Hora) </span> es el más importante a considerar para saber el precio de imprimir en 3D. <br>En estos englobamos todos los costos que son proporcionales a las horas que esté puesta la máquina imprimiendo nuestra pieza, tenemos el costo operativo, costo de electricidad, costo de amortización de la máquina, postprocesado.</p>
+        <p>Una manera fácil de hacerlo sería calcular cuánto queremos ganar por mes con cada impresora 3D en base a los costos nombrados anteriormente, a ese valor que queremos ganar por mes lo dividimos en 30 días y luego en 24 horas para obtener el valor hora.</p>
+        <p class="mb-2"><span class="custom-text">Datos de ejemplo:</span></p>
+        <p class="mb-4"><span class="custom-text">
+            <span class="custom-data">Nombre:</span> Superman bust <br>
+            <span class="custom-data">Precio Filamento:</span> $ 1600 <br>
+            <span class="custom-data">Valor Hora:</span> 90 <br>
+            <span class="custom-data">Tiempo de Impresión:</span> 32 hs <br>
+            <span class="custom-data">Cantidad de Material:</span> 700 gr <br>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="section-result">
+    <h1 class="title text-center">Resultado</h1>
+    <p class="text-center sub-title">El resultado se guarda en tu navegador por un tiempo limitado</p>
+    <div class="container form-result" id="form-result">
+    </div>
+    <div class="container d-flex justify-content-center">
+      <div class="d-flex justify-content-center mt-4 mr-5 mrp-5"><a><button id="btnAdd" type="button"
+            class="btn btn-light btn-home">Agregar más</button></a></div>
+      <div class="d-flex justify-content-center mt-4"><a href="#section-all"><button id="btnVer" type="button"
+            class="btn btn-light btn-home">Ver Todos</button></a></div>
+    </div>
+  </section>
+  <section id="section-all">
+    <h1 class="title text-center">Tus costos</h1>
+    <p class="text-center sub-title">Exporta tus costos en formato CSV y crea una planilla excel.</p>
+    <div class="all-costos" id="all-costos">
+    </div>
+    <div class="container d-flex justify-content-center mt-4">
+      <button type="button" class="btn btn-light btn-home mr-5 mrp-5" id="csv">Exportar</button>
+      <button type="button" class="btn btn-light btn-limpiar btn-home" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">Limpiar</button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Eliminar los costos guardados.</h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-home mr-5 mrp-5" data-bs-dismiss="modal"
+                id="cerrarModal">Cerrar</button>
+              <button type="button" class="btn btn-light btn-limpiar btn-home" id="limpiar">Limpiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./js/librerias/CSVExport.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</body>
+
+</html>
